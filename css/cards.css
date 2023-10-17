@@ -1,0 +1,110 @@
+:root {
+    --std: all .2s ease-in-out;
+    --mid: #ADAAAA;
+    --light: #C9C3C3;
+    --white: #FAF3F3;
+}
+button {
+    background: none;
+    border: 0;
+    transition: var(--std);
+}
+button:hover {
+    cursor: pointer;
+}
+.card {
+    position: relative;
+}
+.card-header {
+    width: 47rem;
+    height: 27rem;
+    position: absolute;
+    z-index: 5;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: var(--std);
+}
+.card:hover .card-header {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -62%);
+}
+.card:hover .card-footer {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -38%);
+}
+.card-header > img {
+    border-radius: 7px;
+    width: 100%;
+    height: 100%;
+}
+.card-header > button {
+    background-color: rgba(0,0,0,0.2);
+    font-size: 100px;
+    color: var(--white);
+    position: absolute;
+    z-index: 10;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    clip-path:circle();
+}
+.card-header > button:hover {
+    background-color: rgba(0,0,0,0.4);
+}
+.card-header .material-symbols-outlined {
+    font-size: 8rem;
+    font-variation-settings: 'wght' 300;
+}
+.card-footer {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: flex-end;
+    justify-content: space-between;
+    background-color: #464646;
+    border-radius: 7px;
+    padding: 12px;
+    width: 50rem;
+    height: 30rem;
+    transition: var(--std);
+}
+.stats, .tags {
+    margin: 1rem 1rem;
+}
+.stats {
+    color: var(--mid);
+}
+.stats > span:not(:first-of-type), .tags > span:not(:first-of-type) {
+    display: inline-block;
+    margin: auto .5em;
+}
+.likes {
+    color: limegreen;
+}
+.rating {
+    padding: .2rem .4rem;
+    font-size: .6em;
+    border: 1px solid var(--mid);
+}
+.tags {
+    font-size: .9em;
+}
+.tags > span:not(:last-of-type):after {
+    content: "\2022";
+    color: var(--mid);
+    padding-left: 2rem;
+}
+.buttons > button {
+    font-size: 42px;
+    clip-path: circle();
+    padding: 1px;
+}
+.buttons > button:hover {
+    background-color: rgba(108, 108, 108, 0.4);
+}

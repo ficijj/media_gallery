@@ -1,0 +1,22 @@
+body {
+    display: grid;
+    grid-template-rows: 40px 1fr 40px;
+}
+nav {
+    display: grid;
+    grid-template-columns: 80% 1fr 1fr 1fr 1fr;
+}
+article {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 3fr 1fr 1fr 1fr;
+}
+.hero-image {
+    grid-column-start: 1;
+    grid-column-end: 5;
+}
+.bottom-bar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
