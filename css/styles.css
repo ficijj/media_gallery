@@ -11,9 +11,13 @@ article {
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-template-rows: 3fr 1fr 1fr 1fr;
 }
-.hero-image {
-    grid-column-start: 1;
-    grid-column-end: 5;
+.slide-show {
+    position: relative;
+    margin: auto;
+    max-width: 100%;
+}
+.slide-show img {
+    width: 100%;
 }
 .bottom-bar {
     display: flex;
