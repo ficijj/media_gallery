@@ -12,21 +12,24 @@
 <body>
     <nav>
         <img src="" alt="Logo">
-        <a href="http://www.google.com">About</a>
-        <a href="http://www.google.com">Upload</a>
-        <a href="http://www.google.com">Info</a>
-        <a href="http://www.google.com">Credits</a>
+        <div class="nav-links">
+            <a href="http://www.google.com">About</a>
+            <a href="http://www.google.com">Upload</a>
+            <a href="http://www.google.com">Info</a>
+            <a href="http://www.google.com">Credits</a>
+        </div>
     </nav>
     <header class="slide-show">
-        <img src="media/emoji_poster2.png" alt="Emoji Movie Poster">
+        <img src="https://picsum.photos/1920/500" alt="Place holder image">
+        <button title="Back" class="material-symbols-outlined" id="back">navigate_before</button>
+        <button title="Next" class="material-symbols-outlined" id="next">navigate_next</button>
     </header>
-    <article>
-        <div class="cards">
-            <!-- <div class="card">
-                <header class="card-header">
-                    <img src="media/emoji_poster.png" alt="Emoji Movie Poster">
-                    <button title="Play" class="material-symbols-outlined">play_circle</button>
-                </header>
+    <article class="card-grid">
+        <div class="card" id="1">
+            <header class="card-header">
+                <img src="https://picsum.photos/470/270/?image=12" alt="Placeholder image">
+                <button title="Play" class="material-symbols-outlined">play_circle</button>
+            </header>
             <footer class="card-footer">
                 <div class="buttons">
                     <button title="Watch" class="material-symbols-outlined">add_circle</button>
@@ -45,7 +48,82 @@
                         <span>Funny</span>
                     </div>
                 </div>
-            </footer> -->
+            </footer>
+        </div>
+        <div class="card" id="2">
+            <header class="card-header">
+                <img src="https://picsum.photos/470/270/?image=27" alt="Placeholder image">
+                <button title="Play" class="material-symbols-outlined">play_circle</button>
+            </header>
+            <footer class="card-footer">
+                <div class="buttons">
+                    <button title="Watch" class="material-symbols-outlined">add_circle</button>
+                    <button title="Like" class="material-symbols-outlined">recommend</button>
+                    <button title="More" class="material-symbols-outlined more" id="more">expand_circle_down</button>
+                </div>
+                <div class="info">
+                    <div class="stats">
+                        <span class="likes">82% Match</span>
+                        <span class="runtime">1h 26m</span>
+                        <span class="rating">TV&ndash;14</span>
+                    </div>
+                    <div class="tags">
+                        <span>Family</span>
+                        <span>Animated</span>
+                        <span>Funny</span>
+                    </div>
+                </div>
+            </footer>
+        </div>
+        <div class="card" id="3">
+            <header class="card-header">
+                <img src="https://picsum.photos/470/270/?image=31" alt="Placeholder image">
+                <button title="Play" class="material-symbols-outlined">play_circle</button>
+            </header>
+            <footer class="card-footer">
+                <div class="buttons">
+                    <button title="Watch" class="material-symbols-outlined">add_circle</button>
+                    <button title="Like" class="material-symbols-outlined">recommend</button>
+                    <button title="More" class="material-symbols-outlined more" id="more">expand_circle_down</button>
+                </div>
+                <div class="info">
+                    <div class="stats">
+                        <span class="likes">82% Match</span>
+                        <span class="runtime">1h 26m</span>
+                        <span class="rating">TV&ndash;14</span>
+                    </div>
+                    <div class="tags">
+                        <span>Family</span>
+                        <span>Animated</span>
+                        <span>Funny</span>
+                    </div>
+                </div>
+            </footer>
+        </div>
+        <div class="card" id="4">
+            <header class="card-header">
+                <img src="https://picsum.photos/470/270/?image=46" alt="Placeholder image">
+                <button title="Play" class="material-symbols-outlined">play_circle</button>
+            </header>
+            <footer class="card-footer">
+                <div class="buttons">
+                    <button title="Watch" class="material-symbols-outlined">add_circle</button>
+                    <button title="Like" class="material-symbols-outlined">recommend</button>
+                    <button title="More" class="material-symbols-outlined more" id="more">expand_circle_down</button>
+                </div>
+                <div class="info">
+                    <div class="stats">
+                        <span class="likes">82% Match</span>
+                        <span class="runtime">1h 26m</span>
+                        <span class="rating">TV&ndash;14</span>
+                    </div>
+                    <div class="tags">
+                        <span>Family</span>
+                        <span>Animated</span>
+                        <span>Funny</span>
+                    </div>
+                </div>
+            </footer>
         </div>
     </article>
     <footer class="bottom-bar">
