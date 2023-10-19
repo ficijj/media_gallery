@@ -11,7 +11,7 @@ body {
     margin-left: 4rem;
     margin-right: 4rem;
     background-color: var(--background);
-    color: var(--text);
+    font-size: 2rem;
 }
 a:link, a:visited {
     color: var(--text);
@@ -22,6 +22,7 @@ a:hover {
     text-decoration: underline;
 }
 nav {
+    color: var(--text);
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -31,17 +32,38 @@ nav > img {
     margin-left: 3rem;
 }
 .nav-links {
-    width: 22rem;
+    width: 30rem;
     margin-right: 3rem;
     display: flex;
     justify-content: space-between;
 }
+#trigram {
+    display: none;
+    font-size: 2em;
+    background: none;
+}
+#trigram:hover {
+    background: rgba(0, 0, 0, 0.3);
+}
 button {
     border: 0;
+    background: none;
     transition: var(--std);
 }
 button:hover {
     cursor: pointer;
+}
+@media only screen and (max-width: 1130px) {
+    .slide-show,
+    .nav-links {
+        display: none;
+    }
+    #trigram {
+        display: block;
+    }
+    body {
+        grid-template-rows: 6rem 1fr 6rem;
+    }
 }
 .slide-show > button {
     color: var(--middle-light);
@@ -70,20 +92,26 @@ button:hover {
     width: 100%;
 }
 article {
-    margin-top: 5rem;
+    margin-top: 1rem;
+    margin-bottom: 2rem;
     display: grid;
-    grid-gap: 5rem 1.5rem;
-    grid-template-columns: repeat(auto-fit, minmax(50rem, 1fr));
-    grid-template-rows: repeat(auto-fill, minmax(30rem, 1fr));
+    grid-gap: 4rem 1.5rem;
+    grid-template-columns: repeat(auto-fit, minmax(34rem, 1fr));
+    grid-template-rows: repeat(auto-fill, minmax(27rem, 1fr));
     justify-items: center;
     align-items: center;
 }
 .card {
-    width: 50rem;
-    height: 30rem;
+    width: 100%;
+    min-width: 33.5rem;
+    max-width: 42rem;
+    height: 15em;
 }
 .bottom-bar {
+    margin-top: 0.5rem;
     display: flex;
     align-items: center;
     justify-content: center;
+    color: var(--text);
+    font-size: 1.6rem;
 }
