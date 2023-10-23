@@ -4,10 +4,13 @@
     --middle-dark: #19376D;
     --middle-light: #576CBC;
     --text: #A5D7E8;
+    --button-bg: rgba(0, 0, 0, 0.2);
+    --button-bg-hover: rgba(0, 0, 0, 0.5);
 }
 body {
     display: grid;
-    grid-template-rows: 6rem 50rem 1fr 6rem;
+    grid-template-rows: 4rem 50rem 1fr 4rem;
+    grid-gap: 1.8rem;
     margin-left: 4rem;
     margin-right: 4rem;
     background-color: var(--background);
@@ -23,17 +26,17 @@ a:hover {
 }
 nav {
     color: var(--text);
+    margin-top: 1rem;
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
 nav > img {
     width: auto;
-    margin-left: 3rem;
+    height: 3.8rem;
 }
 .nav-links {
     width: 30rem;
-    margin-right: 3rem;
     display: flex;
     justify-content: space-between;
 }
@@ -65,9 +68,37 @@ button:hover {
         grid-template-rows: 6rem 1fr 6rem;
     }
 }
+.number-of, 
+.dots {
+    color: var(--text);
+    background-color: var(--button-bg);
+    padding: 8px 12px;
+    position: absolute;
+}
+.number-of {
+    font-size: 1.2rem;
+    top: 1.6em;
+}
+.dots {
+    bottom: 1.15em;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.dots > button {
+    font-size: 1.6rem;
+    padding: 1px;
+    clip-path: circle();
+}
+.dots > button:hover {
+    background-color: var(--button-bg-hover);
+}
+.slide-show {
+    padding: 1em;
+    background-color: var(--middle-light);
+}
 .slide-show > button {
     color: var(--middle-light);
-    background-color: rgba(0, 0, 0, 0.2);
+    background-color: var(--button-bg);
     font-size: 6rem;
     position: absolute;
     z-index: 10;
@@ -75,13 +106,13 @@ button:hover {
     transform: translateY(-50%);
 }
 .slide-show > button:hover {
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: var(--button-bg-hover);
 }
 .slide-show > #back {
-    left: 0px;
+    left: 0.33em;
 }
 .slide-show > #next {
-    right: 0px;
+    right: 0.33em;
 }
 .slide-show {
     position: relative;
@@ -108,7 +139,6 @@ article {
     height: 15em;
 }
 .bottom-bar {
-    margin-top: 0.5rem;
     display: flex;
     align-items: center;
     justify-content: center;

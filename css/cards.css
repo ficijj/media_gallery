@@ -3,6 +3,8 @@
     --mid: #ADAAAA;
     --light: #C9C3C3;
     --white: #FAF3F3;
+    --middle-light: #576CBC;
+    --middle-dark: #19376D;
 }
 .card > button {
     background: none;
@@ -69,7 +71,7 @@
     flex-direction: row-reverse;
     align-items: flex-end;
     justify-content: space-between;
-    background-color: #464646;
+    background-color: var(--middle-dark);
     border-radius: 7px;
     padding: 12px;
     width: 100%;
