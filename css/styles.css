@@ -4,7 +4,7 @@
     --middle-dark: #19376D;
     --middle-light: #576CBC;
     --text: #A5D7E8;
-    --button-bg: rgba(0, 0, 0, 0.2);
+    --button-bg: rgba(0, 0, 0, 0.45);
     --button-bg-hover: rgba(0, 0, 0, 0.5);
 }
 body {
@@ -68,37 +68,42 @@ button:hover {
         grid-template-rows: 6rem 1fr 6rem;
     }
 }
-.number-of, 
-.dots {
+.dots-wrapper {
     color: var(--text);
     background-color: var(--button-bg);
+    margin-bottom: 0.5rem;
+    border-radius: 1rem;
     padding: 8px 12px;
     position: absolute;
-}
-.number-of {
-    font-size: 1.2rem;
-    top: 1.6em;
-}
-.dots {
-    bottom: 1.15em;
+    bottom: 1.19em;
     left: 50%;
     transform: translateX(-50%);
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
 }
-.dots > button {
-    font-size: 1.6rem;
-    padding: 1px;
-    clip-path: circle();
+.dots-wrapper > .dot {
+    background-color: rgba(255, 255, 255, 0.6);
+    width: 1.2rem;
+    height: 1.2rem;
+    margin: 0.4rem;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: var(--std);
 }
-.dots > button:hover {
-    background-color: var(--button-bg-hover);
+.dots-wrapper > .dot:hover {
+    width: 1.3rem;
+    height: 1.3rem;
+    background-color: rgba(255,255,255,1);
 }
 .slide-show {
     padding: 1em;
     background-color: var(--middle-light);
 }
 .slide-show > button {
-    color: var(--middle-light);
+    color: rgba(255, 255, 255, 0.6);
     background-color: var(--button-bg);
+    border-radius: 1rem;
     font-size: 6rem;
     position: absolute;
     z-index: 10;
@@ -109,10 +114,10 @@ button:hover {
     background-color: var(--button-bg-hover);
 }
 .slide-show > #back {
-    left: 0.33em;
+    left: 2.5rem;
 }
 .slide-show > #next {
-    right: 0.33em;
+    right: 2.5rem;
 }
 .slide-show {
     position: relative;
