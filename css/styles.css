@@ -5,11 +5,11 @@
     --middle-light: #576CBC;
     --text: #A5D7E8;
     --button-bg: rgba(0, 0, 0, 0.45);
-    --button-bg-hover: rgba(0, 0, 0, 0.5);
+    --button-bg-hover: rgba(0, 0, 0, 0.9);
 }
 body {
     display: grid;
-    grid-template-rows: 4rem 50rem 1fr 4rem;
+    grid-template-rows: 4rem 60rem 1fr 4rem;
     grid-gap: 1.8rem;
     margin-left: 4rem;
     margin-right: 4rem;
@@ -34,6 +34,7 @@ nav {
 nav > img {
     width: auto;
     height: 3.8rem;
+    border-radius: 0.5rem;
 }
 .nav-links {
     width: 30rem;
@@ -68,37 +69,13 @@ button:hover {
         grid-template-rows: 6rem 1fr 6rem;
     }
 }
-.dots-wrapper {
-    color: var(--text);
-    background-color: var(--button-bg);
-    margin-bottom: 0.5rem;
-    border-radius: 1rem;
-    padding: 8px 12px;
-    position: absolute;
-    bottom: 1.19em;
-    left: 50%;
-    transform: translateX(-50%);
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-}
-.dots-wrapper > .dot {
-    background-color: rgba(255, 255, 255, 0.6);
-    width: 1.2rem;
-    height: 1.2rem;
-    margin: 0.4rem;
-    border-radius: 50%;
-    cursor: pointer;
-    transition: var(--std);
-}
-.dots-wrapper > .dot:hover {
-    width: 1.3rem;
-    height: 1.3rem;
-    background-color: rgba(255,255,255,1);
-}
 .slide-show {
+    border-radius: 1rem;
     padding: 1em;
     background-color: var(--middle-light);
+    position: relative;
+    margin: auto;
+    max-width: 100%;
 }
 .slide-show > button {
     color: rgba(255, 255, 255, 0.6);
@@ -112,6 +89,7 @@ button:hover {
 }
 .slide-show > button:hover {
     background-color: var(--button-bg-hover);
+    color: rgba(255, 255, 255, 1);
 }
 .slide-show > #back {
     left: 2.5rem;
@@ -119,13 +97,39 @@ button:hover {
 .slide-show > #next {
     right: 2.5rem;
 }
-.slide-show {
-    position: relative;
-    margin: auto;
-    max-width: 100%;
-}
 .slide-show img {
+    border-radius: 1rem;
     width: 100%;
+}
+.dots-wrapper {
+    color: var(--text);
+    background-color: var(--button-bg);
+    margin-bottom: 0.5rem;
+    border-radius: 1rem;
+    padding: 8px 12px;
+    position: absolute;
+    bottom: 1.19em;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    transition: var(--std);
+}
+.dots-wrapper:hover {
+    background-color: var(--button-bg-hover);
+}
+.dots-wrapper > .dot {
+    background-color: rgba(255, 255, 255, 0.6);
+    width: 1.2rem;
+    height: 1.2rem;
+    margin: 0.4rem;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: var(--std);
+}
+.dots-wrapper > .dot:hover {
+    background-color: rgba(255,255,255,1);
 }
 article {
     margin-top: 1rem;
